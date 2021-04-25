@@ -8,7 +8,32 @@ function App() {
 
   const [searchOpen, setSearchOpen] = useState(false);
 
-
+  const beers = [
+    {
+      name: "Beer 1",
+      ph: 5,
+      colour: "orange",
+      isFavourite: true
+    },
+    {
+      name: "Beer Two",
+      ph: 2,
+      colour: "green",
+      isFavourite: true
+    },
+    {
+      name: "Beer thr33",
+      ph: 10,
+      colour: "yellow",
+      isFavourite: true
+    },
+    {
+      name: "Beer 4our",
+      ph: 5,
+      colour: "blue",
+      isFavourite: false
+    }
+  ]
 
 
   return (
@@ -22,11 +47,11 @@ function App() {
         </div>
       </header>
       <main className="main">
-        <section className="search">
+        <section className={`search ${searchOpen ? "searchOpen" : ""}`}>
           <Search searchOpen={searchOpen} setSearchOpen={setSearchOpen}/>
         </section>
         <section className="displayBeers">
-          <DisplayBeers />
+          <DisplayBeers beers={beers}/>
         </section>
       </main>
     </div>

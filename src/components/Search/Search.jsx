@@ -17,7 +17,7 @@ const Search = (props) => {
    
   return (
     <span>
-      <button onClick={searchHandler}>
+      <button className={styles.searchButton} onClick={searchHandler}>
         {searchOpen ? faSearchMinusElement :  faSearchPlusElement }
         {/* {faSearchElement} */}
       </button>

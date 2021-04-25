@@ -35,7 +35,7 @@
 
 
 @media only screen and (max-width:600px)  {
-  /* Mobile */
+  /* Mobile - portrait */
   .main {
     background-color: green;
   }
@@ -44,26 +44,34 @@
     width: 10px;
     border: solid 1px red;
   }
-  .search:hover {
+  .searchOpen {
     width: 100px;
     border: solid 2px blue;
   }
 
   .displayBeers {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    /* grid-template-columns: auto; */
   }
 }
 
 @media only screen and (min-width:601px)  {
-  /* Mobile - possibly landscape */
+  /* Mobile - landscape */
   .main {
     background-color: lightblue;
   }
-
+  .search {
+    display: fixed;
+    width: 10px;
+    border: solid 1px red;
+  }
+  .searchOpen {
+    width: 100px;
+    border: solid 2px blue;
+  }
   .displayBeers {
-    display: grid;
-    grid-template-columns: auto;
+    display: flex;
+    /* grid-template-columns: auto; */
   }
 }
 
@@ -77,13 +85,17 @@
     height: 90vh;
   }
 
-  .main div {
+  section > div {
     border: 1px solid red;
     min-height: 50vh;
   }
-  .main section {
+  .main > section {
     border: green 1px solid;
   }
+  .search {
+    width: 100%;
+  }
+  
 }
 
 

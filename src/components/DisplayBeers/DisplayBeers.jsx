@@ -1,9 +1,17 @@
-import React from 'react'
+import React from 'react';
+import styles from './DisplayBeers.module.scss';
+import BeerCard from '../BeerCard';
 
-const DisplayBeers = () => {
+const DisplayBeers = (props) => {
+  const beers = props.beers
+
   return (
     <div>
-      Display Beers
+      <ul className={styles.cards}>
+        {beers.map((beer, index)=>{
+          return  <BeerCard key={index} beer={beer}/>
+        })}
+      </ul>
     </div>
   )
 }
